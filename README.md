@@ -29,8 +29,8 @@
 flex-direction: row;横排，height: 100%; width: 内容宽度
 
 ## 定位问题
-> * fixed 父元素的内边距有影响
 > * 位置在上面的绝对定位的元素，放在上面，否则在显示隐藏时会有问题
+> * 定位局中，position: absolute; left: 0; right: 0; text-align: center; top: 10px; left 和right要设置，否则ios不会局中
 
 ## ref用变量表示，取值方法
 > * :ref="'zanIcon'+moment.feedId"
