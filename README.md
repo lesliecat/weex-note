@@ -44,6 +44,9 @@ flex-direction: row;横排，height: 100%; width: 内容宽度
 > * 超出加省略号 lines: 1; text-overflow: ellipsis;
 
 
+## web
+> * 查询字符串  JOSN.stringify 转化的  要用encodeURIComponent  转码  否则ios不识别
+
 ## text 不可换行写
 
 ## 前进和返回
