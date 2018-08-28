@@ -13,15 +13,20 @@
 ## 事件的穿透现象
 > * 浮层不加事件，点击会触发浮层下面元素的事件
 > * 给浮层加 @touchstart="preventDefault"
+> * ios 没有这个问题
 
 ## less 不要加注释，打包会有问题
 
 ## storage
-> * storage.setItem可以存储对象，getItem得到的是字符串
+> * storage.setItem可以安卓可以存储对象，getItem得到的是字符串，ios不行
+> * 为了统一，存储字符串格式或number
+> * getItem 是异步的
 
 
 ## div v-if 放在第一层，值为false会有问题
 > * 不放在第一层，或加v-else 输出空div
+> * template 第一次div 默认高度100%，flex-direction: 默认; 竖排width 100%;height: 内容高度
+flex-direction: row;横排，height: 100%; width: 内容宽度
 
 ## 定位问题
 > * fixed 父元素的内边距有影响
@@ -35,8 +40,9 @@
 ## scroller
 > * 直接加scroller，div超出屏幕会滚动，不加，不会滚动
 
-## text 超出加省略号
-> * lines: 1; text-overflow: ellipsis;
+## text 
+> * 超出加省略号 lines: 1; text-overflow: ellipsis;
+
 
 ## text 不可换行写
 
@@ -53,6 +59,14 @@
 > * div组件和text组件都不支持背景图片
 > * 宽：720px=100%         高：1250px =100%
 > * <list>就相当于我们在html中的<ul>标签。<cell>就相当于我们在html中的<li>标签。需要注意的是并不需要给<list>和<cell>增加额外的css样式，而是把样式都写在<div>中，还有就是在网页中预览的时候会出现一些样式错误，但是你在模拟器中预览就比较好。
+
+## opacity
+> * ios给父元素加opacity，只能影响父元素，不影响子元素。安卓正常
+> * bindingX 设置opacity 能影响子元素
+
+## height
+> * 安卓设置 height:0; 没有作用，改成1,ios没有这个问题
+
 
 
 
